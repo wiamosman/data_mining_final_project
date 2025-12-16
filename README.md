@@ -1,5 +1,5 @@
-##Evaluation Results
-Our evaluation on the **IMDb Large Movie Review Dataset** highlights a significant trade-off between model complexity and computational overhead.
+Evaluation Results
+Our evaluation on the IMDb Large Movie Review Dataset highlights a significant trade-off between model complexity and computational overhead.
 
 ###Model Performance Comparison<table style="width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; border-collapse: collapse;">
 <thead>
@@ -80,6 +80,7 @@ Our evaluation on the **IMDb Large Movie Review Dataset** highlights a significa
 </tbody>
 </table>
 
-###Summary of Findings* **Transformers (SOTA):** **XLNet** and **RoBERTa** achieved the highest F1 scores (0.93+), demonstrating the power of self-attention for contextual understanding.
+Summary of Findings* 
+**Transformers (SOTA):** **XLNet** and **RoBERTa** achieved the highest F1 scores (0.93+), demonstrating the power of self-attention for contextual understanding.
 * **Traditional ML (Efficiency):** **Logistic Regression (LR)** and **Naive Bayes (NB)** are the efficiency leaders. NB finished in 0.06 seconds, while LR provided a strong balance of 88% accuracy in just 6 seconds.
 * **The Random Forest Anomaly:** **Random Forest (RF)** was highly inefficient for this text task, taking over **127 minutes** while failing to outperform the much faster linear models.
