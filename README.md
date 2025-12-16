@@ -1,7 +1,7 @@
 Evaluation Results
-Our evaluation on the IMDb Large Movie Review Dataset highlights a significant trade-off between model complexity and computational overhead.
 
-###Model Performance Comparison<table style="width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; border-collapse: collapse;">
+Our evaluation on the IMDb Large Movie Review Dataset highlights a significant trade-off between model complexity and computational overhead.
+<table style="width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; border-collapse: collapse;">
 <thead>
 <tr style="background-color: #f6f8fa; border-bottom: 2px solid #d0d7de;">
 <th style="padding: 10px; text-align: left;">Model</th>
@@ -80,7 +80,10 @@ Our evaluation on the IMDb Large Movie Review Dataset highlights a significant t
 </tbody>
 </table>
 
-Summary of Findings* 
-**Transformers (SOTA):** **XLNet** and **RoBERTa** achieved the highest F1 scores (0.93+), demonstrating the power of self-attention for contextual understanding.
-* **Traditional ML (Efficiency):** **Logistic Regression (LR)** and **Naive Bayes (NB)** are the efficiency leaders. NB finished in 0.06 seconds, while LR provided a strong balance of 88% accuracy in just 6 seconds.
-* **The Random Forest Anomaly:** **Random Forest (RF)** was highly inefficient for this text task, taking over **127 minutes** while failing to outperform the much faster linear models.
+Summary of Findings
+
+    Transformers (SOTA): XLNet and RoBERTa achieved the highest F1 scores (0.93+), demonstrating the power of self-attention mechanisms for deep contextual understanding.
+
+    Traditional ML (Efficiency): Logistic Regression (LR) and Naive Bayes (NB) are the efficiency leaders. NB finished in 0.06 seconds, while LR provided a strong balance of 88% accuracy in just 6 seconds.
+
+    The Random Forest Anomaly: Random Forest (RF) was highly inefficient for this text classification task, taking over 127 minutes while failing to outperform the much faster linear models (SVM/LR) due to the high dimensionality of TF-IDF features.
