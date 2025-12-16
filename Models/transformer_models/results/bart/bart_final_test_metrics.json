@@ -1,0 +1,10 @@
+{
+    "eval_accuracy": 0.92916,
+    "eval_precision": 0.9228343974146764,
+    "eval_recall": 0.93664,
+    "eval_f1": 0.9296859491007265,
+    "epoch": 5.0,
+    "runtime_train_with_validation_seconds": 3292.0,
+    "runtime_test_evaluation_seconds": 204.43,
+    "runtime_total_seconds": 3496.43
+}

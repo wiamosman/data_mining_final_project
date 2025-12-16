@@ -1,0 +1,14 @@
+{
+    "eval_loss": 0.4685263931751251,
+    "eval_accuracy": 0.93376,
+    "eval_precision": 0.9321007331845712,
+    "eval_recall": 0.93568,
+    "eval_f1": 0.9338869370808048,
+    "eval_runtime": 265.0532,
+    "eval_samples_per_second": 94.321,
+    "eval_steps_per_second": 11.79,
+    "epoch": 5.0,
+    "runtime_train_with_validation_seconds": 3869.52,
+    "runtime_test_evaluation_seconds": 265.06,
+    "runtime_total_seconds": 4134.58
+}
