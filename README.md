@@ -1,24 +1,30 @@
-📊 Evaluation: Traditional ML vs. Transformers
+Evaluation: Traditional ML vs. Transformer-Based Models
 
-This project provides a comprehensive comparative analysis of sentiment classification using the IMDb Large Movie Review Dataset (50,000 polar reviews). We evaluate the trade-offs between predictive accuracy and computational efficiency across two distinct modeling paradigms.
+This project conducts a comparative analysis between traditional machine learning models and modern transformer architectures for sentiment classification. Using the IMDb Large Movie Review Dataset (50,000 polar reviews), we evaluate the trade-offs between predictive accuracy and computational efficiency.
 Evaluated Models
 
-    Traditional ML (TF-IDF): Naive Bayes, Logistic Regression, Support Vector Machines (SVM), and Random Forest.
+    Traditional (TF-IDF): Support Vector Machines (SVM), Logistic Regression (LR), Random Forest (RF), and Naive Bayes (NB).
 
-    Transformer-Based: BERT, RoBERTa, XLNet, and BART.
+    Transformers: BERT, RoBERTa, XLNet, and BART.
 
-Key Results
+Performance Summary
 
-The study reveals a significant performance-efficiency gap. While Transformers achieve state-of-the-art accuracy, traditional linear models offer massive speed advantages.
-Model Class	Top Performer	F1 Score	Total Time (Training + Inference)
-Transformer	XLNet	0.9339	~68.9 minutes
-Traditional ML	Logistic Regression	0.8819	~6.2 seconds
-Major Findings
+The following table summarizes the results obtained on an NVIDIA A100 GPU:
+Model	Accuracy	F1 Score	Total Time (s)	Efficiency Rank
+XLNet	0.9338	0.9339	4134.58	Low
+RoBERTa	0.9334	0.9335	2868.78	Low
+BART	0.9292	0.9297	3496.43	Low
+BERT	0.9185	0.9192	2826.24	Medium-Low
+LR	0.8820	0.8819	6.19	High
+SVM	0.8813	0.8805	248.83	Medium
+NB	0.8302	0.8196	0.06	Ultra-High
+RF	0.8222	0.8230	7633.23	Very Low
+Key Findings
 
-    The Accuracy Leader: XLNet and RoBERTa achieved the highest F1 scores (>0.93), outperforming traditional methods by approximately 5–11%.
+    The Accuracy Gap: Transformer-based models (specifically XLNet and RoBERTa) set the performance ceiling with F1 scores exceeding 0.93. They provide superior contextual understanding compared to traditional methods.
 
-    The Efficiency King: Logistic Regression and Naive Bayes are remarkably efficient. Logistic Regression provides a strong baseline (0.88 F1) in a fraction of the time required for deep learning.
+    The Efficiency Leader: Logistic Regression and Naive Bayes offer the best performance-to-cost ratio. Logistic Regression achieved ~88% accuracy in just 6 seconds, making it ideal for resource-constrained environments.
 
-    The Random Forest Outlier: Random Forest proved unsuitable for this task, taking the longest time to train (~127 minutes) while yielding lower accuracy (0.82 F1) due to the high-dimensional sparsity of the TF-IDF features.
+    The Random Forest Outlier: Random Forest proved highly inefficient for this task, taking over 127 minutes to run while yielding lower accuracy than simpler linear models due to the high-dimensional sparsity of TF-IDF vectors.
 
-    The Trade-off: Model selection should be driven by resource constraints. Transformers are ideal for high-precision needs, while Logistic Regression remains the most cost-effective choice for large-scale, real-time applications.
+    Conclusion: While Transformers are essential for high-precision tasks, traditional linear models remain highly competitive for large-scale, time-sensitive applications.
